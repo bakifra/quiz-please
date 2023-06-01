@@ -2,9 +2,11 @@
   "name": "quiz-please",
   "version": "1.0.0",
   "description": "Very beautiful quiz made by us.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js --ext js,json,jsx --ignore ./sessions",
+    "dbr": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
   },
   "keywords": [],
   "author": "",
