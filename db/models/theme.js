@@ -10,11 +10,11 @@ this.hasMany( Question, {foreignKey: 'theme_id'});
     {
       theme_name: {
         allowNull: false,
-        type: Sequelize.TEXT
+        type: DataTypes.TEXT
       },
      theme_img: {
       allowNull: false,
-      type: Sequelize.TEXT
+      type: DataTypes.TEXT
      },
     },
     {
