@@ -1,14 +1,16 @@
 const React = require('react');
-const Layout = require('./Layout');
+const ThemeCard = require('./ThemeCard');
 
-function Themes({ title, header, themes = [] }) {
+function Themes({ header, themes = [] }) {
   return (
-    <Layout title={title}>
+    <>
       <h1>{header}</h1>
-      {themes.map((theme) => {
-        return <div>{theme}</div>;
-      })}
-    </Layout>
+      <div className="themes_list">
+        {themes.map((theme) => (
+          <ThemeCard theme={theme} key={theme.id} />
+        ))}
+      </div>
+    </>
   );
 }
 
